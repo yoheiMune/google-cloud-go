@@ -42,6 +42,7 @@ To query existing tables, create a Query and call its Read method:
         GROUP BY year
         ORDER BY year
     `)
+    q.QueryConfig.UseLegacySQL = true
     it, err := q.Read(ctx)
     if err != nil {
         // TODO: Handle error.
